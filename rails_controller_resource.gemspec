@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = RailsControllerResource::VERSION
   s.authors     = ["Stefan Bilharz"]
   s.email       = ["sbilharz@heilmannsoftware.de"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of RailsControllerResource."
-  s.description = "TODO: Description of RailsControllerResource."
+  s.homepage    = "https://github.com/sbilharz/rails_controller_resource"
+  s.summary     = "CRUD resources for rails controllers that can be composed of several associated models and provide dynamic read/write access to single attributes"
+  s.description = "CRUD resources for rails controllers that can be composed of several associated models and provide dynamic read/write access to single attributes"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "LICENSE", "Rakefile", "README.md"]
