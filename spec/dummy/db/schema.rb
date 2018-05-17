@@ -10,7 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_17_135222) do
+ActiveRecord::Schema.define(version: 2018_05_17_140532) do
+
+  create_table "blog_roles", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "blog_id"
+    t.integer "level"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["blog_id"], name: "index_blog_roles_on_blog_id"
+    t.index ["user_id"], name: "index_blog_roles_on_user_id"
+  end
+
+  create_table "blogs", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string "title"
+    t.text "body"
+    t.integer "blog_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["blog_id"], name: "index_posts_on_blog_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
